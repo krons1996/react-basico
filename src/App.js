@@ -1,19 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
 import Menu from './components/Menu';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Alert, Button } from "react-bootstrap"
+import Box from './components/Box';
+import Pagina1 from './pages/Pagina1';
+import Array from './pages/Array';
+import Objeto from './pages/Objeto';
+import Carros from './pages/Carros';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
     <div>
-      <Menu />
-      <h1>HELLO WORLD</h1>
-      <h1>Italo</h1>
-      <Button variant="primary">Primary</Button>
-      <Alert variant="danger">
-        This is a danger alert—check it out!
-      </Alert>
+
+
+      <BrowserRouter>
+        <Menu />
+        <Routes>
+          <Route path="/" element={<Carros />} />
+          <Route path="/carros" element={<Carros />} />
+          <Route path="/objeto" element={<Objeto />} />
+          <Route path="/array" element={<Array />} />
+          <Route path="/pagina1" element={<Pagina1 />} />
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }
