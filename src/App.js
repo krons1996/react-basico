@@ -9,7 +9,6 @@ function App() {
     <div>
       <Menu />
       <h1>HELLO WORLD</h1>
-      <h1>Krons</h1>
       <h1>Italo</h1>
       <Button variant="primary">Primary</Button>
       <Alert variant="danger">
