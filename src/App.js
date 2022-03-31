@@ -1,7 +1,7 @@
 import './App.css';
 import Menu from './components/Menu';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Alert, Button } from "react-bootstrap"
+import { Alert, Button, Container } from "react-bootstrap"
 import Box from './components/Box';
 import Pagina1 from './pages/Pagina1';
 import Array from './pages/Array';
@@ -17,13 +17,15 @@ function App() {
 
       <BrowserRouter>
         <Menu />
-        <Routes>
-          <Route path="/" element={<Carros />} />
-          <Route path="/carros" element={<Carros />} />
-          <Route path="/objeto" element={<Objeto />} />
-          <Route path="/array" element={<Array />} />
-          <Route path="/pagina1" element={<Pagina1 />} />
-        </Routes>
+        <Container>
+          <Routes>
+            <Route path="/" element={<Carros />} />
+            <Route path="/carros" element={<Carros />} />
+            <Route path="/objeto" element={<Objeto />} />
+            <Route path="/array" element={<Array />} />
+            <Route path="/pagina1" element={<Pagina1 />} />
+          </Routes>
+        </Container>
       </BrowserRouter>
 
     </div>
