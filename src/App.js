@@ -8,6 +8,8 @@ import Array from './pages/Array';
 import Objeto from './pages/Objeto';
 import Carros from './pages/Carros';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Contador from './pages/Contador';
+import FilmesPopulares from './pages/filmes/FilmesPopulares';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
             <Route path="/objeto" element={<Objeto />} />
             <Route path="/array" element={<Array />} />
             <Route path="/pagina1" element={<Pagina1 />} />
+            <Route path="/contador" element={<Contador />} />
+            <Route path="/filmes/populares" element={<FilmesPopulares />} />
           </Routes>
         </Container>
       </BrowserRouter>
