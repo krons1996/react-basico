@@ -10,6 +10,7 @@ import Carros from './pages/Carros';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Contador from './pages/Contador';
 import FilmesPopulares from './pages/filmes/FilmesPopulares';
+import FilmesDetalhes from './pages/filmes/FilmesDetalhes';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/pagina1" element={<Pagina1 />} />
             <Route path="/contador" element={<Contador />} />
             <Route path="/filmes/populares" element={<FilmesPopulares />} />
+            <Route path="/filmes/:id" element={<FilmesDetalhes />} />
           </Routes>
         </Container>
       </BrowserRouter>
