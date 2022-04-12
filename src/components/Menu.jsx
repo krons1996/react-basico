@@ -15,15 +15,11 @@ const Menu = () => {
             <Link className="nav-link" to="/objeto">Objeto</Link>
             <Link className="nav-link" to="/contador">Contador</Link>
             <Link className="nav-link" to="/filmes/populares">Filmes Populares</Link>
+            <Link className="nav-link" to="/filmes/cartaz">Filmes em Cartaz</Link>
+            <Link className="nav-link" to="/filmes/lancamento">Filmes em Lançamento</Link>
            </Nav>
         </Container>
       </Navbar>
-      <ul>
-        <li><a href="">Página 1</a></li>
-        <li><a href="">Página 2</a></li>
-        <li><a href="">Página 3</a></li>
-
-      </ul>
     </div>
   )
 }
