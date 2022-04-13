@@ -16,12 +16,17 @@ const FilmesPopulares = () => {
     })
   }, [])
 
+  console.log(filmes.length)
+
   return (
     <div>
       <h1>Filmes Populares</h1>
+
+      {filmes.length === 0 && <h1>Carregando...Aguarde</h1>}
+      
       <Row>
-        {filmes.map(item => (
-          <Col md={3} className="mb-3">
+        {filmes.map(item => (          
+          <Col key={item.id} md={3} className="mb-3">
             <Card>
               <Card.Img variant="top" src={posterurl + item.poster_path}></Card.Img>
               <Card.Body>
@@ -31,7 +36,6 @@ const FilmesPopulares = () => {
                 <Link className="btn btn-danger" to={'/filmes/' + item.id}>Ver Detalhes</Link>
               </Card.Body>
             </Card>
-
           </Col>
         ))}
       </Row>

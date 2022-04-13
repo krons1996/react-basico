@@ -19,7 +19,7 @@ const FilmesCartaz = () => {
         <h1>Filmes em Cartaz</h1>
         <Row>
           {filmes.map(item => (
-            <Col md={3} className="mb-3">
+            <Col key={item.id} md={3} className="mb-3">
               <Card>
                 <Card.Img variant="top" src={posterurl + item.poster_path}></Card.Img>
                 <Card.Body>
